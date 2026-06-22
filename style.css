@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a2e;
+  color: #eee;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.game-container {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+}
+
+.game-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.board-section {
+  flex-shrink: 0;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  width: 300px;
+  height: 600px;
+  border: 3px solid #4a4a6a;
+  background-color: #0f0f1a;
+  gap: 1px;
+  padding: 1px;
+}
+
+.cell {
+  background-color: #1e1e30;
+  border: 1px solid #2a2a40;
+}
+
+.piece-I { background-color: #00f0f0; border-color: #00c8c8; }
+.piece-O { background-color: #f0f000; border-color: #c8c800; }
+.piece-T { background-color: #a000f0; border-color: #8000c8; }
+.piece-S { background-color: #00f000; border-color: #00c800; }
+.piece-Z { background-color: #f00000; border-color: #c80000; }
+.piece-J { background-color: #0000f0; border-color: #0000c8; }
+.piece-L { background-color: #f0a000; border-color: #c88000; }
+
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 180px;
+  text-align: left;
+}
+
+.score-box h2,
+.help-box h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #aaa;
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4ecdc4;
+}
+
+.game-status {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #4ecdc4;
+  color: #1a1a2e;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #3dbdb5;
+}
+
+button:disabled {
+  background-color: #3a3a50;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.help-box ul {
+  list-style: none;
+  line-height: 1.8;
+}
+
+.help-box kbd {
+  display: inline-block;
+  padding: 0.15rem 0.4rem;
+  background-color: #2a2a40;
+  border: 1px solid #4a4a6a;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
